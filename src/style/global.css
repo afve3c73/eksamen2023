@@ -1,0 +1,26 @@
+:root {
+  /* farver */
+  --primary: #91a683;
+  --dark_green: #4e5947;
+  --middle_green: #728267;
+  --light_green: #dcfcca;
+  --white: #ffffff;
+  --black: #1a1a1a;
+
+  /* fonts */
+  --font-size-h1: 45px;
+  --font-size-h2: 40px;
+  --font-size-h3: 30px;
+  --font-size-h4: 20px;
+  --font-size-index: 14px;
+  --font-size-button: 20px;
+}
+
+@media only screen and (min-width: 400px) {
+  :root {
+    --font-size-h1: 60px;
+    --font-size-h2: 50px;
+    --font-size-h3: 40px;
+    --font-size-button: 27px;
+  }
+}
