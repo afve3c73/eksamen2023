@@ -9,26 +9,29 @@ import Button from "../components/Button.astro";
     <section class="top_header">
         <p>Beställ online eller på <b>023 - 3311</b>| Öppettider: Tisdag - Torsdag: 17 - 20, Fredag - Söndag 16 - 20</p> 
      </section> 
-    <section class="header">
-        <a href="/menu.html"><img src="logo.svg" alt="logo"></a>
-        <nav>
-            
-            <article>
-            <a>Grupper</a>
-            <a>Om oss</a>
+    <header >
+        <section class="banner">
+        <div class="logo">
+            <a href="/menu.html"><img src="logo.svg" alt="logo"></a>
+        </div>
+  
+        <nav class="main-menu">
+          <button class="toggle-btn">Menu</button>
+          <ul>
+            <li><a href="#0">Grupper</a></li>
+            <li><a href="#0">Om oss</a></li>
             <Button link="/menu.html" variant="secondary" size="big">Menu</Button>
             <Button link="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13" variant="primary" size="big">Beställ</Button>
-        </article>
+          </ul>
         </nav>
     </section>
-</header>
+      </header>
+   
 <style>
+
 header {
-    background-color: var(--middle_green);
-    margin: auto;
-
+    background: var(--middle_green);
 }
-
     .top_header {
         background-color: var(--light_green);
 padding-block: 8px;
@@ -36,27 +39,68 @@ padding-block: 8px;
     img {
         width: 55px;
     }
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: auto;
-        padding: 10px;
-        
-    }
-article {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 30px;
-    
-    
+    /* header */
+.banner {
+  
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
 }
-    nav a {
-        font-size: 16px;
-    }
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+}
+
+ul a {
+    font-size: 16px;
+}
+
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  display: none; /* Skjul knappen som standard */
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+}
 
     @media only screen and (max-width: 900px) {
       .top_header {
@@ -68,6 +112,32 @@ article {
 
 <script>
 
+// Lav variablen "btn", der henviser til ".toggle-btn"
+const btn = document.querySelector(".toggle-btn");
+// Lav variablen "menu", der henviser til ".main-menu"
+const menu = document.querySelector(".main-menu");
 
+// Lav funktionen "toggleMenu()" med følgende funktionalitet
+function toggleMenu() {
+  menu.classList.toggle("shown");
+  // a) toggle klassen "shown" på menu vha. classList.toggle
+  const menuShown = menu.classList.contains("shown");
+  // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
+
+  // c) spørg om "menuShown" i if-sætningen nedenfor (=> if (menuShown)), og udskift teksten
+  if (menuShown) {
+    console.log(menuShown); // se i konsollen
+    // sæt btn.textContent til "Luk", hvis menuShown er "true"
+    btn.textContent = "X";
+  } else {
+    console.log(menuShown); // se i konsollen
+    // sæt btn.textContent til "Menu", hvis menuShown er "false"
+    btn.textContent = "Menu";
+  }
+  // "toggleMenu()" slutter her
+
+  // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
+}
+btn.addEventListener("click", toggleMenu);
     
 </script>
