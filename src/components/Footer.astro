@@ -1,9 +1,141 @@
 ---
-import "../styles/global.css";
-import "../styles/tokens.css";
-import "../styles/base.css";
+import "../style/global.css";
+import "../style/alians.css";
+import "../style/base.css";
 ---
 
 <footer>
-	
+    <section class="sektion">
+	<a href="/index.html"> <img src="logo.svg" alt="logo"></a>
+    <section class="section">
+<article>
+    <h4>
+        Sociala medier
+    </h4>
+    <ul>
+        <li>
+            <a href="https://www.tiktok.com/@tondo_gourmetpizza">Tiktok</a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/tondo_gourmetpizza/">Instagram</a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/TondoSverige?locale=sv_SE">Facebook</a>
+        </li>
+        <li><a href="https://www.linkedin.com/in/%F0%9F%8D%95anders-s%C3%B6derlund%F0%9F%8D%95-423828a/">LinkedIn</a>
+            
+        </li>
+    </ul>
+
+</article>
+<article>
+    <h4>
+       Kontakt
+    </h4>
+    <ul>
+        <li>
+            <p>Kårarvsvägen 6</p></li>
+            <li><p>791 94 Falun</p></li>
+            <li><p>023-33111</p></li>
+            <li> <p>Pizza@tondo.se</p>
+        </li>
+    </ul>
+</article>
+<article>
+    <h4>
+      Öppeningstider
+    </h4>
+    <ul>
+        <li>
+            <p>Tisdag - Torsdag: 17 - 20</p></li>
+            <li><p>Fredag - Söndag: 16-20</p></li>
+    </ul>
+</article>
+<article>
+    <h4>
+      Genvägar
+    </h4>
+    <ul>
+        <li>
+            <p>Tisdag - Torsdag: 17 - 20</p></li>
+            <li><p>Fredag - Söndag: 16-20</p></li>
+       
+    </ul>
+
+</article>
+    </section>
+</section>
 </footer>
+
+<style>
+ footer {
+    background-color: var(--primary);
+    padding-block: 50px;
+   
+    flex-direction: column;
+    margin: auto;
+    padding-inline: 10px;
+    
+ }   
+
+ .sektion {
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+
+   
+}
+
+ .section {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+ }
+
+ article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ img {
+    margin: auto;
+ }
+
+ ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 5px;
+ }
+ 
+ @media only screen and (min-width: 600px) { 
+footer {
+flex-direction: row;}
+.sektion {
+    
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding-block: 10px;}
+.section {
+flex-direction: row;
+flex-wrap: wrap;
+gap:50px;  
+
+    
+    justify-content: end;
+    
+   
+}
+
+ul {
+    align-items: baseline;
+}
+    }
+
+    
+
+</style>

@@ -6,7 +6,7 @@
 
 body {
   color: var(--black);
-  max-width: 1200px;
+
   margin: auto;
 }
 
@@ -16,7 +16,8 @@ img {
   display: block;
 }
 
-p {
+p,
+a {
   font-family: "Open Sans", sans-serif;
 }
 

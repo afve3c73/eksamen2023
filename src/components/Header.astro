@@ -1,0 +1,73 @@
+---
+import "../style/global.css";
+import "../style/alians.css";
+import "../style/base.css";
+import Button from "../components/Button.astro";
+---
+
+<header>
+    <section class="top_header">
+        <p>Beställ online eller på <b>023 - 3311</b>| Öppettider: Tisdag - Torsdag: 17 - 20, Fredag - Söndag 16 - 20</p> 
+     </section> 
+    <section class="header">
+        <a href="/menu.html"><img src="logo.svg" alt="logo"></a>
+        <nav>
+            
+            <article>
+            <a>Grupper</a>
+            <a>Om oss</a>
+            <Button link="/menu.html" variant="secondary" size="big">Menu</Button>
+            <Button link="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13" variant="primary" size="big">Beställ</Button>
+        </article>
+        </nav>
+    </section>
+</header>
+<style>
+header {
+    background-color: var(--middle_green);
+    margin: auto;
+
+}
+
+    .top_header {
+        background-color: var(--light_green);
+padding-block: 8px;
+    }
+    img {
+        width: 55px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px;
+        
+    }
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    
+    
+}
+    nav a {
+        font-size: 16px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .top_header {
+        visibility:hidden;
+    }
+        
+    }
+</style>
+
+<script>
+
+
+    
+</script>

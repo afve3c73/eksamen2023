@@ -27,10 +27,17 @@ p {
   text-align: center;
 }
 
-@media only screen and (min-width: 400px) {
+a {
+  font-size: var(--font-size-index);
+  text-align: center;
+  color: var(--black);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
   h2,
   h3,
   h4 {
-    text-align: right;
+    text-align: left;
   }
 }
