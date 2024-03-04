@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from "../components/Button.astro";
+import "../style/global.css";
+import "../style/alians.css";
+import "../style/base.css";
+
+---
+
+<Layout title="Om oss">
+	<main>
+        <h1>Om oss</h1>
+        <h2>Vi er Tondo</h2>
+        <section>
+            <img src="/public/pizza-omoss2.webp" alt="pizza">
+            <article>
+               <p>Tondo Pizzeria i Falun är en pärla bland gastronomiska destinationer och utmärker sig genom att erbjuda en autentisk och minnesvärd pizzainriktad matupplevelse. Beläget i den charmiga staden Falun, har Tondo skapat sig ett namn genom att kombinera traditionella pizzasmaker med nytänkande kreativitet. </p>
+
+<p>Restaurangen strävar efter att erbjuda sina gäster en välkomnande atmosfär, där kvaliteten på råvarorna och precisionen i tillagningen står i fokus. Med ett engagemang för att använda färska och lokalt förvärvade ingredienser strävar Tondo efter att skapa varje pizza som en unik konstnärlig skapelse. </p>
+
+<p>Det breda och lockande menyn på Tondo Pizzeria i Falun inkluderar ett utbud av traditionella och innovativa pizzakombinationer, där varje tugga är en kulinarisk resa. Från de klassiska favoriterna till noga utformade specialiteter, tar Tondo sina gäster med på en smakresa som hyllar både lokala råvaror och internationella smaker.</p>
+
+<p>Med en passion för mat, en varm atmosfär och en stadig hängivenhet till excellens har Tondo Pizzeria i Falun etablerat sig som en destination där smak och gemenskap smälter samman. Oavsett om det är en avslappnad måltid med vänner eller en speciell tillställning, strävar Tondo efter att göra varje besök till en minnesvärd och smakfull upplevelse.</p>
+            </article>
+        </section>
+        <h2>Jobba hos oss</h2>
+        <section>
+            <img class="bild" src="/public/pizza-omoss.webp" alt="pizza">
+            <article>
+               <p>Vi expanderar vårt team och letar efter passionerade och sociala individer för att förstärka vår personalstyrka under kvällar och helger. För att vara kvalificerad bör du vara 16 år eller äldre i år.</p>
+
+<p>Vi värdesätter sociala, glada och trevliga personligheter som kan hantera arbete under stressiga situationer. Vi tror på att skapa en positiv arbetsmiljö där varje medarbetare bidrar till en välkomnande atmosfär för våra gäster. </p>
+
+<p>För att ansöka ber vi dig skicka in en kort video där du presenterar dig själv. Dela med dig av varför du skulle vara en passande tillskott till vårt team och vad du förväntar dig av arbetet. Skicka filmen till pizza@tondo.se och var noga med att märka mailet med antingen "JobbFalun" eller "JobbHedemora".</p>
+
+<p>I ditt mail, inkludera också dina kontaktuppgifter så att vi kan komma i kontakt med dig. Vi ser fram emot att lära känna dig och välkomna dig till Tondo-familjen!</p>
+            </article>
+        </section>
+        <h2>Kontakt</h2>
+        <section>
+            <article>
+            <h3>Kontakt oss</h3>
+            <p>Har du några frågor eller funderingar, tveka inte att höra av dig till oss, antagligen på telefon, mail eller via vårt formulär här nedanför. </p>
+
+            <form>
+                <!-- Formular-indhold -->
+                <div class="form-felt">
+                 <div> <label for="navn">Namn</label>
+                  <input placeholder="Namn" id="name" name="name" type="text" /></div>
+      
+      
+                  <div><label for="email">E-mail</label>
+                  <input placeholder="E-mail" id="email" name="email" type="email" /></div>
+
+                  <div><label for="phone">Telefon</label>
+                  <input placeholder="Telefon" id="telefon" name="telefon" type="number" /></div>
+      
+                  <div><label for="text">Skriv ditt meddelande här</label>
+
+                    <textarea placeholder="Skriv ditt meddelande här" id="text" name="text" rows="6">
+                    
+                    </textarea>
+                    </div>
+                    <Button link="#" variant="primary" size="big">Skicka</Button>
+                  
+                </div>
+              </form>
+        </article>
+        <article>
+            <h3>Hitta oss</h3>
+            <p>Ni hittar oss på Kårarvsvägen 6 i Falun</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22279.961847268743!2d15.578362322017488!3d60.60738983378114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46677b8f8bb3a3a9%3A0xc5cbaccb9eb71287!2sTondo!5e0!3m2!1ssv!2sse!4v1709504388324!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+        </section>
+    </main>
+	
+</Layout>
+
+<style>
+
+    section {
+        padding-bottom: 65px;
+    }
+img {
+    
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    padding-bottom: 30px;
+}
+
+.bild {
+    border-radius: 50%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    
+    
+}
+
+p {
+    max-width: 65ch;
+}
+form {
+  padding: 2rem;
+  background: var(--primary);
+  border-radius: 8px;
+  display: grid;
+  font-family: ;
+  font-size: 20px;
+
+}
+
+label,
+input,
+textarea,
+select,
+button {
+  display: block;
+}
+input {
+padding-block: 10px;
+border-radius: 50px;
+border-style: none;
+padding-inline: 10px;
+font-style: italic;
+width: 100%;
+}
+.form-felt {
+  display: grid;
+  gap:15px;
+  
+}
+textarea {
+    width: 100%;
+    border-radius: 20px;
+border-style: none;
+}
+
+@media only screen and (min-width: 900px) {
+article {
+    align-items: flex-start;
+}
+    img {
+        max-width: 450px;
+        padding-bottom: 0;
+        justify-content: baseline;
+       
+    }
+
+    .bild {
+        order:1;
+        border-radius: 50%;
+    }
+    section {
+display: grid;
+grid-template-columns:1fr 1fr;
+gap: 100px;
+
+    }
+
+    form {
+        display: flex;
+       
+    }
+}
+
+</style>

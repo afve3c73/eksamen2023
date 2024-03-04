@@ -8,19 +8,19 @@
   --black: #000000;
 
   /* font-size */
-  --font-size-h1: 45px;
-  --font-size-h2: 40px;
-  --font-size-h3: 30px;
-  --font-size-h4: 20px;
-  --font-size-index: 14px;
+  --font-size-h1: 40px;
+  --font-size-h2: 30px;
+  --font-size-h3: 20px;
+  --font-size-h4: 15px;
+  --font-size-index: 12px;
   --font-size-button: 20px;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
   :root {
-    --font-size-h1: 60px;
-    --font-size-h2: 50px;
-    --font-size-h3: 40px;
+    --font-size-h1: 40px;
+    --font-size-h2: 30px;
+    --font-size-h3: 20px;
     --font-size-button: 27px;
   }
 }

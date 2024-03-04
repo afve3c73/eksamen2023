@@ -1,1 +1,229 @@
-<Layout title="Kategorier"></Layout>
+---
+import Layout from '../layouts/Layout.astro';
+import Button from "../components/Button.astro";
+import "../style/global.css";
+import "../style/alians.css";
+import "../style/base.css";
+
+---
+
+<Layout title="Menu">
+	<main>
+       <h1>Menu</h1>
+       <nav>
+        <h4>
+            <a href="#pizza">Pizza</a>
+        </h4>
+        <h4>
+            <a href="#barnpizza">Barnpizza</a>
+        </h4>
+        <h4>
+            <a href="#sallad">Sallad</a>
+        </h4>
+
+        <h4>
+            <a href="#tillbehör">Tillbehör</a>
+        </h4>
+        <h4>
+            <a href="#dryck">Dryck</a>
+        </h4>
+       </nav>
+       <h2>Pizza</h2>
+       <section id="pizza">
+        <article>
+            <p class="bold">Havets guld // 120kr</p>
+            <p class="italic">Löjrom, handksalade räkor, västerbottensost, picklad rödlök, vitlökssmör, mozzarella, creme fraiche, dill & citron</p>
+        </article>
+        <article>
+            <p class="bold">Räkan  // 120kr</p>
+            <p class="italic">Handskalade räkor, chili, vitlökssmör, mozzarella, tomatsås</p>
+        </article>
+        <article>
+            <p class="bold">Oxen  // 145kr</p>
+            <p class="italic">Tunnskivad Oxfilé , soltorkade tomater vitlökssmör, mozzarella, tomatsås</p>
+        </article>
+        <article>
+            <p class="bold">Salami // 140kr</p>
+            <p class="italic">Salami, rödlök, parmesan, mozzarella, chiliflakes, honung, tomatsås & ruccola</p>
+        </article>
+        <article>
+            <p class="bold">Skogsvaktarn // 175kr</p>
+            <p class="italic">Tryffelkräm, oxfilé, smörstekta kantareller, västerbottensost, mozzarella & vitlökssmör</p>
+        </article>
+        <article>
+            <p class="bold">Löjrom // 170kr</p>
+            <p class="italic">Löjrom, västerbottenost, mozzarella, picklad rödlök,potatischips & creme fraiche, dill & citron</p>
+        </article>
+        <article>
+            <p class="bold">Kebaben // 139kr</p>
+            <p class="italic">Grillat kebabkött, picklad rödlök, cocktailtomater, ruccola, mozzarella, tomatsås. Serveras med röd & vitlökssås</p>
+        </article>
+        <article>
+            <p class="bold">Kantarellen // 139kr</p>
+            <p class="italic">Smörstekta kantareller, mozzarella, parmesanost & creme fraiche</p>
+        </article>
+        <article>
+            <p class="bold">Geten // 125kr</p>
+            <p class="italic">Vanlig skinka, tomatsås, mozzarella</p>
+        </article>
+        <article>
+            <p class="bold">Hawaii // 125kr</p>
+            <p class="italic">Vanlig skinka, ananas, tomatsås, mozzarella</p>
+        </article>
+       </section>
+<h2 id="#barnpizza">Barnpizza</h2>
+       <section>
+        <article>
+            <p class="bold">Skinka // 69kr</p>
+            <p class="italic">Vanlig skinka, tomatsås, mozzarella</p>
+        </article>
+        <article>
+            <p class="bold">Skinka & ananas // 69kr</p>
+            <p class="italic">skinka, ananas, mozzarella & tomatsås</p>
+        </article>
+       </section>
+       <h2 id="#sallad">Sallad</h2>
+       <section>
+        <article>
+            <p class="bold">Kycklingsallad  // 120kr</p>
+            <p class="italic">Löjrom, handksalade räkor, västerbottensost, picklad rödlök, vitlökssmör, mozzarella, creme fraiche, dill & citron</p>
+        </article>
+        <article>
+            <p class="bold">Räksallad // 140kr</p>
+            <p class="italic">Handskalade räkor, chili, vitlökssmör, mozzarella, tomatsås</p>
+        </article>
+        
+        <article>
+            <p class="bold">Sydamarikansk räksallad // 145kr</p>
+            <p class="italic">Tunnskivad Oxfilé , soltorkade tomater vitlökssmör, mozzarella, tomatsås</p>
+        </article>
+        <article>
+            <p class="bold">Salami // 140kr</p>
+            <p class="italic">Salami, rödlök, parmesan, mozzarella, chiliflakes, honung, tomatsås & ruccola</p>
+        </article>
+        <article>
+            <p class="bold">Fetaostsallad // 175kr</p>
+            <p class="italic">Tryffelkräm, oxfilé, smörstekta kantareller, västerbottensost, mozzarella & vitlökssmör</p>
+        </article>
+        <article>
+            <p class="bold">Textmexsallad // 170kr</p>
+            <p class="italic">Löjrom, västerbottenost, mozzarella, picklad rödlök,potatischips & creme fraiche, dill & citron</p>
+        </article>
+        <article>
+            <p class="bold">Getost & persikosallad // 135kr</p>
+            <p class="italic">Löjrom, västerbottenost, mozzarella, picklad rödlök,potatischips & creme fraiche, dill & citron</p>
+        </article>
+        <article>
+            <p class="bold">Halloumisallad // 135kr</p>
+            <p class="italic">Löjrom, västerbottenost, mozzarella, picklad rödlök,potatischips & creme fraiche, dill & citron</p>
+        </article>
+       </section>
+       <h2 id="tillbehör">Tillbehör</h2>
+       <section>
+        <article>
+            <p class="bold">Pommes frites // 40 / 60kr</p>
+            <p class="italic">Stor / liten</p>
+        </article>
+        <article>
+            <p class="bold">Dip // 15kr</p>
+            <p class="italic">Aioli / chillimajonnäs / majonnäs / cheddarost / barbecuesås  </p>
+        </article>
+        <article>
+            <p class="bold">Indiskt nannbröd // 50kr</p>
+            <p class="italic">Vitlök / koriander</p>
+        </article>
+        <article>
+            <p class="bold">Snacks // 50kr</p>
+            <p class="italic">Oliver och jordnötter</p>
+        </article>
+        
+       </section>
+       <h2 id="dryck">
+Dryck
+       </h2>
+       <section>
+        <article>
+            <p class="bold">Läsk // 25kr</p>
+            <p class="italic">Coca Cola / Coca Cola Zero / Fanta / Sprite </p>
+        </article>
+        <article>
+            <p class="bold">Tuborg grön // 50kr</p>
+            <p class="italic">33 cl</p>
+        </article>
+        <article>
+            <p class="bold">Carlsberg // 50kr</p>
+            <p class="italic">33 cl</p>
+        </article>
+        <article>
+            <p class="bold">Juice // 25kr</p>
+            <p class="italic">Apelsin / Äpple </p>
+        </article>
+       </section>
+    </main>
+	
+</Layout>
+
+<style>
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+a {
+    font-size: var(--font-size-h4);
+  font-weight: 700;
+  text-align: center;
+}
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 30px;
+
+
+}
+p {
+    text-align: center;
+    max-width: 300px;
+}
+.bold {
+    font-weight: bold ;
+}
+
+.italic {
+    font-style: italic;
+}
+@media only screen and (min-width: 900px) {
+
+nav {
+    flex-direction: row;
+    
+}
+article {
+    display: flex;
+    align-items: self-start;
+   
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 30px;
+
+
+}
+
+p {
+    text-align: center;
+    max-width: 100%;
+}
+
+}
+
+</style>
+
+

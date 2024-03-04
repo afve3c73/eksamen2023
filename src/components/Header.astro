@@ -7,28 +7,35 @@ import Button from "../components/Button.astro";
 
 <header>
     <section class="top_header">
-        <p>Beställ online eller på <b>023 - 3311</b>| Öppettider: Tisdag - Torsdag: 17 - 20, Fredag - Söndag 16 - 20</p> 
+        <p><b><a href="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13">Beställ online</a></b> eller på <b>023 - 3311</b>| Öppettider: Tisdag - Torsdag: 17 - 20, Fredag - Söndag 16 - 20</p> 
      </section> 
     <header >
         <section class="banner">
         <div class="logo">
-            <a href="/menu.html"><img src="logo.svg" alt="logo"></a>
+            <a href="/index.html"><img src="logo.svg" alt="logo"></a>
         </div>
   
         <nav class="main-menu">
           <button class="toggle-btn">Menu</button>
           <ul>
-            <li><a href="#0">Grupper</a></li>
-            <li><a href="#0">Om oss</a></li>
+            <li><a href="/grupper.html">Grupper</a></li>
+            <li><a href="/om_oss.html">Om oss</a></li>
+            <div class="knapp">
             <Button link="/menu.html" variant="secondary" size="big">Menu</Button>
+        </div>
+        <div class="knapp">
             <Button link="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13" variant="primary" size="big">Beställ</Button>
+        </div>
           </ul>
         </nav>
     </section>
       </header>
    
 <style>
-
+img {
+    width: 55px;
+    padding-bottom: 5px;
+}
 header {
     background: var(--middle_green);
 }
@@ -36,16 +43,18 @@ header {
         background-color: var(--light_green);
 padding-block: 8px;
     }
-    img {
-        width: 55px;
+    .top_header p {
+text-align: center;
     }
+
     /* header */
 .banner {
-  
-  padding: 2rem;
+  padding-block: 10px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: auto;
   
@@ -65,6 +74,11 @@ padding-block: 8px;
 
 ul a {
     font-size: 16px;
+    
+}
+a {
+    font-family: "Poppins", sans-serif;
+    
 }
 
 /* burgermenu */
@@ -80,10 +94,20 @@ ul a {
 }
 
 @media (max-width: 600px) {
+img {
+    padding-bottom: 10px;
+}
+.banner {
+    padding-inline: 10px;
+    padding-bottom: 30px;
+    
+}
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
   }
-
+.knapp {
+    order: -1;
+}
   .main-menu {
     display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
   }
@@ -98,11 +122,13 @@ ul a {
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
-    flex-flow: column;
+    
+    flex-direction: column;
+    gap:40px;
   }
 }
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 700px) {
       .top_header {
         visibility:hidden;
     }

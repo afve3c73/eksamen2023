@@ -17,7 +17,8 @@ img {
 }
 
 p,
-a {
+a,
+form {
   font-family: "Open Sans", sans-serif;
 }
 
