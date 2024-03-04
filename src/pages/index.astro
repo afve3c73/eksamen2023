@@ -28,36 +28,126 @@ import "../style/base.css";
 
   <body>
     <Header/>
-	<header>
-		<article class="hero_text">
-        <div class="hero-text">
-            <h1>Pizzeria Tondo</h1>
-            <h2>Italiensk deg - svensk stil</h2>
-        </div>
-        <div class="knapp">
-            <Button link="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13" variant="primary" size="big">Beställ</Button>
-        </div>
-	</article>
-        <img src="public/hero.webp" alt="heropizza">
+    <header>
+        <article class="hero_text">
+            <div class="hero-text">
+                <h1>Pizzeria Tondo</h1>
+                <h2 class="h2">Italiensk deg - svensk stil</h2>
+            </div>
+            <div class="knapp">
+                <Button link="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13" variant="primary" size="big">Beställ</Button>
+            </div>
+        </article>
+        <img class="hero" src="public/hero.webp" alt="heropizza">
     </header>
     <main class="">
-      
+		<section>
+			<h2>
+Bästsäljare
+		</h2>
+		<section class="pizzasec">
+			<article class="pizza">
+				<img class="pizzaicon" src="public/pizza_icon.svg" alt="icon">
+				<div>
+					<h4>Löjrom // 170kr</h4>
+					<p class="pizzatext">Löjrom, västerbottenost, mozzarella, picklad rödlök, potatischips & creme fraiche, dill & citron</p>
+				</div>
+			</article>
+			<article class="pizza">
+				<img class="pizzaicon" src="public/pizza_icon.svg" alt="icon">
+				<div >
+					<h4>Salami // 139kr</h4>
+					<p class="pizzatext">Salami, rödlök, parmesan, mozzarella, chiliflakes, honung, tomatsås & ruccola</p>
+				</div>
+			</article>
+			<article class="pizza">
+				<img class="pizzaicon" src="public/pizza_icon.svg" alt="icon">
+				<div >
+					<h4>Kantarellen 139kr</h4>
+					<p class="pizzatext">Smörstekta kantareller, mozzarella, parmesanost & creme fraiche</p>
+				</div>
+			</article>
+			
+		</section>
+		<article >
+			<Button link="/menu.html" variant="primary" size="big">Menu</Button>
+		</article>
+	</section>
+	<h2>Månadens pizza</h2>
+	<section class="manaden">
+		<img class="manadenpizza" src="public/pizza_manadens.webp" alt="pizza">
+		<div class="manadentext">
+			<h3>Havets Guld</h3>
+		<p>Denna pizza är en härlig kombination av lyx och tradition. En krämig bas av creme fraiche och mozzarella möter nötig västerbottensost. Tillsammans med handskalade räkor och delikat löjrom skapas en balanserad smakupplevelse. Picklad rödlök, vitlökssmör, dill och citron ger en perfekt mix av syrlighet, fräschör och örtig kryddighet. Varje tugga är en kulinarisk resa som förenar havets friskhet med lantliga smaker, och lämnar en minnesvärd eftersmak. En pizza som förgyller matögonblicket med smakrik mångfald.</p>
+		<p class="pizzatext">Löjrom, handksalade räkor, västerbottensost, picklad rödlök, vitlökssmör, mozzarella, creme fraiche, dill & citron</p>
+	</div>
+	</section>
+	<article >
+		<Button link="https://cloud.caspeco.se/public/webBooking?system=se_tonfal&unitId=13" variant="primary" size="big">Beställ</Button>
+	</article>
     </main>
     <Footer />
-  </body>
+</body>
 </html>
 
 <style>
-  main {
-    max-width: 1200px;
-    margin: auto;
-    padding-inline: 10px;
-    
-  }
+	p {
+		max-width: 65ch;
+	}
+	main {
 
-  main {
-        position: relative;
-        padding-inline: none;
+		padding-bottom: 65px;
+	}
+	h2 {
+		padding-block: 30px;
+	}
+	.manadentext {
+		display: flex;
+		flex-direction: column;
+		gap: 20px
+	}
+	.manaden {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		max-width: 1200px;
+		padding-bottom: 50px;
+	}
+.manadenpizza {
+	max-width: 300px;
+	margin: auto;
+}
+.pizzasec {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		max-width: 1200px;
+		padding-bottom: 50px;
+	}
+	.pizzaicon {
+		width: 150px;
+	}
+h4 {
+	text-align: center;
+}
+.pizzatext {
+	font-style: italic;
+	width: 300px;
+	text-align: center;
+}
+	article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 25px;
+	}
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding-inline: 10px;
     }
 
     header {
@@ -65,44 +155,62 @@ import "../style/base.css";
     }
 
     .hero_text {
-        display: flex;
-        flex-direction: column;
         position: absolute;
         top: 10%;
         left: 6%;
         text-align: center;
         color: white;
-		gap: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
 
-   
+    .knapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     h1 {
-        padding-block: 0;
-        font-size: 60px; /* Glömde enheten px här */
+        margin: 0; /* Ta bort standardmarginaler för h1-elementet */
+        font-size: 60px;
     }
 
-    h2 {
+    .h2 {
+        margin: 0; /* Ta bort standardmarginaler för h2-elementet */
         font-style: italic;
         font-weight: 400;
-        font-size: 24px; /* Glömde storleken här */
+        font-size: 24px;
     }
 
-    img {
+    .hero {
         width: 100%;
-        height: auto; /* Låt höjden skalas proportionellt */
-    }
-
-    main {
-        
+        height: auto;
     }
 
     @media (max-width: 600px) {
-        .hero-text {
+	.hero{
+		height: 50vh;
+	}
+		
+		h1 {
+			padding-block: 0;
+			font-size: 40px;
+		}
+        .hero_text {
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* Centrera texten vertikalt och horisontellt */
+            transform: translate(-50%, -50%);
         }
     }
-</style>
+
+	@media (min-width: 600px) {
+		.manaden {
+			flex-direction: row;
+		}
+
+		.pizzasec {
+			justify-content: space-between;
+		}
+	}
 </style>
